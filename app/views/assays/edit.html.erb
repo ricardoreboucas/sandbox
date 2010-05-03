@@ -1,0 +1,20 @@
+<h1>Editing assay</h1>
+
+<% form_for(@assay) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :done_on %><br />
+    <%= f.datetime_select :done_on %>
+  </p>
+  <p>
+    <%= f.label :fleet_id %><br />
+    <%= f.text_field :fleet_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @assay %> |
+<%= link_to 'Back', assays_path %>
